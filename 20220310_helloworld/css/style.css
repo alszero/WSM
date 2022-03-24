@@ -5,6 +5,10 @@ body > li {
   /* >: 자식, 띄어쓰기: 자손 */
   color: teal;
 }
+ul > ul:nth-child(2) > li {
+  /*찾는 요소 우클릭 > 검사 > 개발자도구 > 우클릭 > Copy selector*/
+  background: hotpink;
+}
 .incheon {
   color: darkblue;
 }
