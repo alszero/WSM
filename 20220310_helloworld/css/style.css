@@ -1,8 +1,8 @@
 /* 우선순위: 포괄 < 구체 */
-/*우선순위: TAG < class < id
+/*우선순위: TAG < class < id < !important
 우선순위: 같은 급일 때는 위 < 아래 쓴 코드*/
 body > li {
-  /* >: 자식, 띄어쓰기: 자손 */
+  /* >: 자식, 띄어쓰기: 자손, +: 첫째자손, ~: 모든자손 */
   color: teal;
 }
 ul > ul:nth-child(2) > li {
@@ -22,6 +22,9 @@ h6 {
 }
 li:nth-child(4) {
   /* 1부터 시작 */
+  /* nth-child(n): n번째 자식 */
+  /* first-child: 첫째 자식 */
+  /* last-child: 막내 자식 */
   text-decoration: underline;
 }
 h2 + h3 {
@@ -31,4 +34,7 @@ h2 + h3 {
 h2 ~ h3 {
   /* h2 형제 중 여러 h3 */
   font-size: 40px;
+}
+body > ul > ul > li:nth-child(3) {
+  text-decoration: underline;
 }
