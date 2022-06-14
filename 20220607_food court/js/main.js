@@ -1,9 +1,9 @@
 //toggle show hidden menu
-function toggleMenu(toggleId, naveListId){
+const toggleMenu = function(toggleId, naveListId){
     const toggle = document.getElementById(toggleId);
     const navList = document.getElementById(naveListId);
 
-    function clickHandler(){
+    const clickHandler = function(){
         navList.classList.toggle('show-menu');
     }
 
@@ -18,5 +18,5 @@ toggleMenu('nav-toggle', 'nav-list');
 // const say = function(){
 //     console.log('hello world2');
 // }
-const say = () => console.log('hello world3');
-say();
+// const say = () => console.log('hello world3');
+// say();
