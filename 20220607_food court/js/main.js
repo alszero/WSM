@@ -1,14 +1,12 @@
 //toggle show hidden menu
-const toggleMenu = function(toggleId, naveListId){
+const toggleMenu = (toggleId, naveListId) => {
     const toggle = document.getElementById(toggleId);
     const navList = document.getElementById(naveListId);
 
-    const clickHandler = function(){
-        navList.classList.toggle('show-menu');
-    }
-
     if(toggle && navList){
-        toggle.addEventListener('click',clickHandler);
+        //add: 추가, remove 제거, toggle: 추가/제거
+        
+        toggle.addEventListener('click', () => navList.classList.toggle('show-menu'));
     }
 }
 toggleMenu('nav-toggle', 'nav-list');
